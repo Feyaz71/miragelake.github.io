@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mirage Lake - Your Trusted Partner in Construction and Building Solutions. Specializing in commercial, residential, and infrastructure projects with sustainable approaches.">
+    <meta name="keywords" content="construction, building solutions, architectural design, commercial construction, sustainable building, infrastructure projects, UAE construction">
+    <meta name="author" content="Mirage Lake">
+    <meta name="theme-color" content="#1D3557">
+    <meta property="og:title" content="Mirage Lake - Construction & Building Experts">
+    <meta property="og:description" content="Your Trusted Partner in Construction and Building Solutions">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://mirage-lake.org">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Mirage Lake - Construction & Building Experts</title>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="logo.png" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <!-- Add WebP support detection -->
+    <script>
+        function supportsWebP() {
+            const elem = document.createElement('canvas');
+            if (elem.getContext && elem.getContext('2d')) {
+                return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+            }
+            return false;
+        }
+        document.documentElement.classList.add(supportsWebP() ? 'webp' : 'no-webp');
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Search Container -->
+    <div class="search-container">
+        <div class="search-input-container">
+            <input type="text" class="search-input" placeholder="Search..." aria-label="Search">
+            <button class="search-clear" aria-label="Clear search">×</button>
+        </div>
+        <div class="search-results" style="display: none;"></div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button class="btn btn-primary accept-all">Accept All</button>
+                <button class="btn btn-secondary customize">Customize</button>
+                <button class="btn btn-outline reject-all">Reject All</button>
+            </div>
+            <a href="/privacy-policy" class="cookie-policy">Learn more</a>
+        </div>
+    </div>
+
+    <!-- Cookie Preferences Modal -->
+    <div class="cookie-preferences-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Cookie Preferences</h2>
+            <div class="cookie-options">
+                <div class="cookie-option">
+                    <div class="option-header">
+                        <h3>Essential Cookies</h3>
+                        <p>Required for the website to function properly</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div class="option-header">
+                        <h3>Analytics Cookies</h3>
+                        <p>Help us understand how visitors interact with our website</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" name="analytics">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div class="option-header">
+                        <h3>Marketing Cookies</h3>
+                        <p>Used to track visitors across websites for marketing purposes</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" name="marketing">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-primary save-preferences">Save Preferences</button>
+                <button class="btn btn-secondary close-modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header-top d-flex justify-content-center align-items-center p-3" role="banner">
+        <div class="d-flex align-items-center">
+            <img src="logo.png" alt="Mirage Lake Construction Company Logo" class="logo" width="80" height="80">
+            <h1 class="ms-4 m-0 display-4">
+                <span class="company-name">Mirage Lake </span> <span class="company-name">Bldg Metal Const Ind. LLC  </span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light glass-nav shadow-sm py-3 sticky-top" role="navigation">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav fs-5">
+                    <li class="nav-item px-3"><a class="nav-link nav-text active" href="index.html">Home</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text" href="services.html">Services</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text" href="projects.html">Projects</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text" href="locations.html">Locations</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text" href="careers.html">Careers</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-light" role="banner">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-12">
+                    <h1 class="welcome-text">Welcome to Mirage Lake</h1>
+                    <p class="fs-4 mb-5">Your Trusted Partner in Construction and Building Solutions</p>
+                    <a href="services.html" class="btn btn-light btn-lg">Explore Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="about-section py-5" style="background-color: var(--background);">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="display-4 mb-4" style="color: var(--primary-blue);">About Mirage Lake</h2>
+                    <p class="lead" style="color: var(--dark-text);">
+                        Mirage Lake Bldg Metal Const Ind. LLC   is a trusted leader in the construction industry, delivering innovative and sustainable solutions for commercial, residential, and infrastructure projects across the UAE and beyond.
+                    </p>
+                    <p style="color: var(--dark-text);">
+                        With decades of expertise and a commitment to quality, we transform visions into reality through advanced engineering, skilled professionals, and a client-focused approach. Our reputation is built on integrity, reliability, and a passion for excellence in every project we undertake.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section py-5" style="background-color: var(--background);">
+        <div class="container text-center">
+            <h2 class="display-4 mb-5" style="color: var(--primary-blue);">Our Core Values</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="value-card p-4 h-100" style="background-color: white; border-radius: 10px; box-shadow: 0 2px 15px rgba(0,0,0,0.1);">
+                        <h3 style="color: var(--primary-blue);">Innovation</h3>
+                        <p style="color: var(--dark-text);">Pioneering new construction techniques and sustainable solutions</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card p-4 h-100" style="background-color: white; border-radius: 10px; box-shadow: 0 2px 15px rgba(0,0,0,0.1);">
+                        <h3 style="color: var(--primary-blue);">Integrity</h3>
+                        <p style="color: var(--dark-text);">Transparent operations and ethical business practices</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="value-card p-4 h-100" style="background-color: white; border-radius: 10px; box-shadow: 0 2px 15px rgba(0,0,0,0.1);">
+                        <h3 style="color: var(--primary-blue);">Excellence</h3>
+                        <p style="color: var(--dark-text);">Uncompromising quality in every project we undertake</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    .projects-section {
+        background-color: var(--secondary-dark);
+        padding: 4rem 0;
+    }
+
+    .project-card {
+        background-color: var(--primary-dark);
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        aspect-ratio: 16/9;
+    }
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    .tall-card {
+        aspect-ratio: 3/4;
+    }
+
+    .project-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .project-card img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: all 0.5s ease;
+    }
+
+    .project-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .project-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+
+    .location-tag {
+        display: inline-block;
+        background: rgba(255,255,255,0.2);
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .hover-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.2);
+        opacity: 0;
+        transition: all 0.3s ease;
+        border-radius: 12px;
+    }
+
+    .project-card:hover .hover-effect {
+        opacity: 1;
+    }
+
+    .project-card:hover .project-overlay {
+        background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2));
+    }
+    </style>
+
+    <!-- Social Media Sidebar -->
+    <div class="social-sidebar">
+        <a href="https://www.linkedin.com/" class="social-icon" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/" class="social-icon" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/" class="social-icon" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5" style="background-color: #f2f0ed;" aria-labelledby="contact-heading">
+        <div class="container">
+            <h2 id="contact-heading" class="display-4 text-center mb-5" style="color: var(--primary-blue);">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-info-card p-5 bg-white rounded shadow-sm">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="contact-block p-4 h-100" style="background-color: #f8f9fa; border-radius: 10px;">
+                                    <h3 class="h4 mb-4" style="color: var(--primary-blue);">
+                                        <i class="fas fa-building me-2"></i>Sharjah Office
+                                    </h3>
+                                    <div class="contact-details">
+                                        <p class="mb-3 d-flex align-items-center">
+                                            <i class="fas fa-phone me-3" style="color: var(--primary-blue);"></i>
+                                            <a href="tel:+97156129844" class="text-decoration-none" style="color: var(--dark-text);">+971 (0)5 612 9844</a>
+                                        </p>
+                                        <p class="mb-3 d-flex align-items-center">
+                                            <i class="fas fa-envelope me-3" style="color: var(--primary-blue);"></i>
+                                            <a href="mailto:info@mirage-lake.org" class="text-decoration-none" style="color: var(--dark-text);">info@mirage-lake.org</a>
+                                        </p>
+                                        <p class="mb-3 d-flex align-items-center">
+                                            <i class="fas fa-map-marker-alt me-3" style="color: var(--primary-blue);"></i>
+                                            <span style="color: var(--dark-text);">Sajja Industrial Area, Sharjah, UAE</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-block p-4 h-100" style="background-color: #f8f9fa; border-radius: 10px;">
+                                    <h3 class="h4 mb-4" style="color: var(--primary-blue);">
+                                        <i class="fas fa-clock me-2"></i>Business Hours
+                                    </h3>
+                                    <div class="contact-details">
+                                        <p class="mb-3 d-flex align-items-center">
+                                            <i class="fas fa-calendar-alt me-3" style="color: var(--primary-blue);"></i>
+                                            <span style="color: var(--dark-text);">Sunday - Thursday</span>
+                                        </p>
+                                        <p class="mb-3 d-flex align-items-center">
+                                            <i class="fas fa-clock me-3" style="color: var(--primary-blue);"></i>
+                                            <span style="color: var(--dark-text);">8:00 AM - 5:00 PM</span>
+                                        </p>
+                                        <p class="mb-3 d-flex align-items-center">
+                                            <i class="fas fa-calendar-times me-3" style="color: var(--primary-blue);"></i>
+                                            <span style="color: var(--dark-text);">Friday - Saturday: Closed</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-5">
+                            <a href="contact.html" class="btn btn-primary px-5 py-3" style="font-size: 1.1rem;">
+                                <i class="fas fa-paper-plane me-2"></i>Get in Touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4" role="contentinfo">
+        &copy; 2025 Mirage Lake. All Rights Reserved.
+    </footer>
+
+    <!-- Add defer to non-critical scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <!-- Scripts -->
+    <script src="security-config.js"></script>
+    <script src="analytics-config.js"></script>
+    <script src="search-config.js"></script>
+    <script src="cookie-consent.js"></script>
+</body>
+</html>
+
+
+   

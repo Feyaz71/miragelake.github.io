@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator - Mirage Lake</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1D3557;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .favicon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .favicon-item {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            background: white;
+        }
+        button {
+            background: #E63946;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        button:hover {
+            background: #c5303a;
+        }
+        .instructions {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .instructions h3 {
+            color: #1976d2;
+            margin-top: 0;
+        }
+        .instructions ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Favicon Generator - Mirage Lake</h1>
+        
+        <div class="instructions">
+            <h3>📋 Instructions</h3>
+            <ol>
+                <li><strong>Load Logo:</strong> Click "Load Logo" to load your logo.png file</li>
+                <li><strong>Generate Favicons:</strong> Click "Generate All" to create all favicon sizes</li>
+                <li><strong>Download:</strong> Right-click each favicon and "Save image as..." with the correct filename</li>
+                <li><strong>Place Files:</strong> Save all favicon files in your project root directory</li>
+            </ol>
+        </div>
+
+        <div class="favicon-grid">
+            <div class="favicon-item">
+                <h4>favicon.ico (16x16)</h4>
+                <canvas id="favicon16" width="16" height="16"></canvas>
+                <br>
+                <button onclick="generateFavicon(16, 'favicon.ico')">Generate 16x16</button>
+            </div>
+
+            <div class="favicon-item">
+                <h4>favicon-16x16.png</h4>
+                <canvas id="favicon16png" width="16" height="16"></canvas>
+                <br>
+                <button onclick="generateFavicon(16, 'favicon-16x16.png')">Generate 16x16 PNG</button>
+            </div>
+
+            <div class="favicon-item">
+                <h4>favicon-32x32.png</h4>
+                <canvas id="favicon32" width="32" height="32"></canvas>
+                <br>
+                <button onclick="generateFavicon(32, 'favicon-32x32.png')">Generate 32x32 PNG</button>
+            </div>
+
+            <div class="favicon-item">
+                <h4>apple-touch-icon.png (180x180)</h4>
+                <canvas id="appleTouch" width="180" height="180"></canvas>
+                <br>
+                <button onclick="generateFavicon(180, 'apple-touch-icon.png')">Generate 180x180</button>
+            </div>
+
+            <div class="favicon-item">
+                <h4>android-chrome-192x192.png</h4>
+                <canvas id="android192" width="192" height="192"></canvas>
+                <br>
+                <button onclick="generateFavicon(192, 'android-chrome-192x192.png')">Generate 192x192</button>
+            </div>
+
+            <div class="favicon-item">
+                <h4>android-chrome-512x512.png</h4>
+                <canvas id="android512" width="512" height="512"></canvas>
+                <br>
+                <button onclick="generateFavicon(512, 'android-chrome-512x512.png')">Generate 512x512</button>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <button onclick="loadLogo()" style="background: #1D3557; font-size: 16px; padding: 15px 30px;">📁 Load Logo</button>
+            <button onclick="generateAll()" style="background: #28a745; font-size: 16px; padding: 15px 30px;">⚡ Generate All</button>
+        </div>
+
+        <div class="instructions">
+            <h3>📁 Required Files</h3>
+            <p>After generating, you need these files in your project root:</p>
+            <ul>
+                <li><code>favicon.ico</code> - Traditional favicon</li>
+                <li><code>favicon-16x16.png</code> - 16x16 PNG favicon</li>
+                <li><code>favicon-32x32.png</code> - 32x32 PNG favicon</li>
+                <li><code>apple-touch-icon.png</code> - 180x180 for iOS</li>
+                <li><code>android-chrome-192x192.png</code> - 192x192 for Android</li>
+                <li><code>android-chrome-512x512.png</code> - 512x512 for Android</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let logoImage = null;
+
+        function loadLogo() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.onchange = function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        logoImage = new Image();
+                        logoImage.onload = function() {
+                            alert('Logo loaded successfully! Now click "Generate All" to create favicons.');
+                        };
+                        logoImage.src = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            };
+            input.click();
+        }
+
+        function generateFavicon(size, filename) {
+            if (!logoImage) {
+                alert('Please load a logo first!');
+                return;
+            }
+
+            const canvas = document.getElementById(getCanvasId(size));
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Calculate scaling to fit logo in square
+            const scale = Math.min(size / logoImage.width, size / logoImage.height);
+            const scaledWidth = logoImage.width * scale;
+            const scaledHeight = logoImage.height * scale;
+            
+            // Center the image
+            const x = (size - scaledWidth) / 2;
+            const y = (size - scaledHeight) / 2;
+            
+            // Draw the logo
+            ctx.drawImage(logoImage, x, y, scaledWidth, scaledHeight);
+            
+            // Create download link
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        function generateAll() {
+            if (!logoImage) {
+                alert('Please load a logo first!');
+                return;
+            }
+
+            // Generate all favicon sizes
+            generateFavicon(16, 'favicon-16x16.png');
+            generateFavicon(32, 'favicon-32x32.png');
+            generateFavicon(180, 'apple-touch-icon.png');
+            generateFavicon(192, 'android-chrome-192x192.png');
+            generateFavicon(512, 'android-chrome-512x512.png');
+            
+            alert('All favicon files generated! Please save them to your project directory.');
+        }
+
+        function getCanvasId(size) {
+            switch(size) {
+                case 16: return 'favicon16png';
+                case 32: return 'favicon32';
+                case 180: return 'appleTouch';
+                case 192: return 'android192';
+                case 512: return 'android512';
+                default: return 'favicon16';
+            }
+        }
+
+        // Auto-load logo.png if it exists
+        window.onload = function() {
+            const testImage = new Image();
+            testImage.onload = function() {
+                logoImage = testImage;
+                console.log('Logo loaded automatically');
+            };
+            testImage.onerror = function() {
+                console.log('Please load logo manually');
+            };
+            testImage.src = 'logo.png';
+        };
+    </script>
+</body>
+</html> 

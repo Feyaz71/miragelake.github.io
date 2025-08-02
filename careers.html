@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Careers at Mirage Lake">
+    <title>Careers - Mirage Lake</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Search Container -->
+    <div class="search-container">
+        <div class="search-input-container">
+            <input type="text" class="search-input" placeholder="Search..." aria-label="Search">
+            <button class="search-clear" aria-label="Clear search">×</button>
+        </div>
+        <div class="search-results" style="display: none;"></div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button class="btn btn-primary accept-all">Accept All</button>
+                <button class="btn btn-secondary customize">Customize</button>
+                <button class="btn btn-outline reject-all">Reject All</button>
+            </div>
+            <a href="/privacy-policy" class="cookie-policy">Learn more</a>
+        </div>
+    </div>
+
+    <!-- Cookie Preferences Modal -->
+    <div class="cookie-preferences-modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Cookie Preferences</h2>
+            <div class="cookie-options">
+                <div class="cookie-option">
+                    <div class="option-header">
+                        <h3>Essential Cookies</h3>
+                        <p>Required for the website to function properly</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div class="option-header">
+                        <h3>Analytics Cookies</h3>
+                        <p>Help us understand how visitors interact with our website</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" name="analytics">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cookie-option">
+                    <div class="option-header">
+                        <h3>Marketing Cookies</h3>
+                        <p>Used to track visitors across websites for marketing purposes</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" name="marketing">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-primary save-preferences">Save Preferences</button>
+                <button class="btn btn-secondary close-modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header-top d-flex justify-content-center align-items-center p-3" role="banner">
+        <div class="d-flex align-items-center">
+            <img src="logo.png" alt="Mirage Lake" class="logo">
+            <h1 class="ms-4 m-0 display-4">
+                <span class="company-name">Mirage Lake</span> <span class="company-name">Bldg Metal Const Ind. LLC  </span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light glass-nav shadow-sm py-3 sticky-top" role="navigation">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav fs-5">
+                    <li class="nav-item px-3"><a class="nav-link nav-text" href="index.html">Home</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text" href="services.html">Services</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text" href="projects.html">Projects</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text" href="locations.html">Locations</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text active" href="careers.html">Careers</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Careers Content -->
+    <section class="careers-section py-5">
+        <div class="container">
+            <h1 class="display-4 text-center mb-5">Join Our Team</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="coming-soon-message p-5" data-aos="fade-up">
+                        <i class="fas fa-briefcase mb-4" style="font-size: 3rem; color: var(--primary-red);"></i>
+                        <h2 class="mb-4">Career Opportunities Coming Soon</h2>
+                        <p class="lead">We are currently updating our career opportunities. Please check back soon for exciting positions at Mirage Lake.</p>
+                        <p class="mt-4">For general employment inquiries, you can reach us at:</p>
+                        <p class="mb-4"><i class="fas fa-envelope me-2"></i>careers@miragelake.com</p>
+                        <a href="contact.html" class="btn btn-primary mt-3">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Sidebar -->
+    <div class="social-sidebar">
+        <a href="https://www.linkedin.com/" class="social-icon" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/" class="social-icon" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/" class="social-icon" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4" role="contentinfo">
+        &copy; 2025 Mirage Lake. All Rights Reserved.
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
