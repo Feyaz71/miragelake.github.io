@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     margin-top: 0;
-    padding-top: 200px;
+    padding-top: 160px;
     padding-bottom: 6rem;
     display: flex;
     align-items: center;
@@ -197,6 +197,29 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid rgba(0, 0, 0, 0.2);
         padding: 0.5rem;
         margin-right: 1rem;
+    }
+    
+    /* Fix hero section for mobile */
+    .hero-section {
+        padding-top: 140px;
+        min-height: auto;
+        padding-bottom: 3rem;
+    }
+    
+    .welcome-text {
+        font-size: 2.5rem;
+        margin-top: 20px;
+        line-height: 1.2;
+    }
+    
+    .hero-section p {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-section .btn-light {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
     }
     
     .navbar-toggler-icon {
@@ -367,7 +390,22 @@ body {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 140px;
+        padding-top: 120px; /* Adjusted to match new header (80px) + navbar height */
+    }
+    
+    /* Adjust header height for mobile */
+    .header-top {
+        height: 80px;
+    }
+    
+    /* Adjust navbar position to match header height */
+    .glass-nav {
+        top: 80px;
+    }
+    
+    /* Adjust logo size for mobile */
+    .logo {
+        height: 60px;
     }
 }
 
@@ -1886,7 +1924,15 @@ main {
 
 @media (max-width: 768px) {
     main {
-        padding-top: 140px;
+        padding-top: 120px; /* Adjusted to match new header (80px) + navbar height */
+    }
+    
+    /* Fix display-4 overlapping with navbar in mobile view */
+    .display-4 {
+        padding-top: 30px; /* Reduced padding since we've adjusted header heights */
+        margin-top: 0;
+        font-size: 2.5rem;
+        line-height: 1.2;
     }
 }
 
@@ -1898,6 +1944,17 @@ main {
     }
     
     /* Improve navbar toggler visibility */
+    .navbar-collapse {
+        margin-top: 10px;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Ensure content sections have proper spacing */
+    section {
+        padding-top: 2rem;
+    }
     .navbar-toggler {
         background-color: rgba(255, 255, 255, 0.9);
         border: 1px solid rgba(0, 0, 0, 0.2);
