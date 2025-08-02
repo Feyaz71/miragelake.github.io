@@ -46,13 +46,16 @@ h1, h2, h3, h4, h5, h6 {
 /* Header Styles */
 .header-top {
     background-color: var(--background);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
@@ -71,8 +74,10 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: none;
     position: fixed;
     width: 100%;
-    top: 120px;
+    top: 100px; /* Reduced to match header height */
     z-index: 999;
+    border-top: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .nav-text {
@@ -180,15 +185,27 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-top {
-        padding: 1rem 0;
+        padding: 0.5rem 0;
+        height: 80px;
     }
     
     .glass-nav {
-        top: 100px;
+        top: 80px;
+    }
+    
+    .navbar-toggler {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 0.5rem;
+        margin-right: 1rem;
+    }
+    
+    .navbar-toggler-icon {
+        width: 1.5em;
+        height: 1.5em;
     }
     
     .hero-section {
-        padding-top: 180px;
+        padding-top: 160px;
         min-height: 80vh;
     }
     
@@ -207,6 +224,11 @@ h1, h2, h3, h4, h5, h6 {
     
     .logo {
         height: 60px;
+        width: auto;
+    }
+    
+    .company-name {
+        font-size: 1.8rem;
     }
 }
 
@@ -302,7 +324,14 @@ body {
     margin-top: 0 !important;
     top: 100px !important;
     background-color: var(--background) !important;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .navbar.sticky-top {
@@ -333,7 +362,13 @@ body {
 
 /* Adjust body padding to account for fixed header */
 body {
-    padding-top: 120px;
+    padding-top: 160px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 140px;
+    }
 }
 
 /* Add hover animations */
@@ -1846,7 +1881,13 @@ input:checked + .slider:before {
 
 /* Update the main content padding to account for fixed header */
 main {
-    padding-top: 180px; /* Adjusted to account for both header and navbar */
+    padding-top: 160px; /* Adjusted to account for both header and navbar */
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 140px;
+    }
 }
 
 /* Additional mobile responsive improvements */
@@ -1854,6 +1895,30 @@ main {
     /* Improve touch targets */
     .nav-link, .btn, .form-control {
         min-height: 44px;
+    }
+    
+    /* Improve navbar toggler visibility */
+    .navbar-toggler {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(29, 53, 87, 0.25);
+    }
+    
+    /* Position the navbar toggler properly */
+    .navbar > .container {
+        position: relative;
+    }
+    
+    .navbar-collapse {
+        background-color: var(--background);
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
     }
     
     /* Better spacing for mobile */
