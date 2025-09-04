@@ -320,14 +320,18 @@ The website includes a comprehensive favicon system with files for all platforms
 
 ### **Technical Support**
 For technical issues or questions about the website:
-- **Email**: [Your support email]
-- **Phone**: [Your support phone]
+- **Email**: info@mirage-lake.org
+- **Phone**: +971 50 147 8848, +971 50 143 8848
 - **Documentation**: This README file
 
 ### **Business Inquiries**
 For business inquiries about Mirage Lake services:
 - **Website**: Visit the contact page
-- **Email**: Use the contact form on the website
+- **Email**: projects@mirage-lake.org
+- **Phone**: +971 50 147 8848, +971 50 143 8848
+- **Address**: Clock Tower Office No:20-702, Sharjah, UAE
+- **Business Hours**: Monday to Saturday, 8:00 AM - 5:00 PM
+- **Use the contact form on the website**
 - **Phone**: Call the numbers listed on the contact page
 
 ## 📝 License
@@ -348,4 +352,4 @@ This project is proprietary software developed for Mirage Lake Bldg Metal Const 
 
 **Built with ❤️ for Mirage Lake Construction**
 
-*Last updated: December 2024* 
+*Last updated: December 2024*
