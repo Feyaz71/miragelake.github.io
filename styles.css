@@ -1950,6 +1950,8 @@ main {
 
 /* Remove all body padding-top here — JS handles it */
 body {
+  object-fit: cover;
+  overflow: auto; 
   background-color: var(--background);
   min-height: 100vh;
   color: var(--dark-text);
