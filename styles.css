@@ -1990,7 +1990,9 @@ body {
 @media (max-width: 991px) {
   .navbar .navbar-toggler {
     margin: 0 auto;
+    width: 100%;
     display: block;
+    object-cover: fit;
   }
 
   .display-4{
