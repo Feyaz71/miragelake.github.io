@@ -18,83 +18,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Search Container -->
-    <div class="search-container">
-        <div class="search-input-container">
-            <input type="text" class="search-input" placeholder="Search..." aria-label="Search">
-            <button class="search-clear" aria-label="Clear search">×</button>
-        </div>
-        <div class="search-results" style="display: none;"></div>
-    </div>
-
-    <!-- Cookie Consent Banner -->
-    <div class="cookie-banner" style="display: none;">
-        <div class="cookie-content">
-            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
-            <div class="cookie-buttons">
-                <button class="btn btn-primary accept-all">Accept All</button>
-                <button class="btn btn-secondary customize">Customize</button>
-                <button class="btn btn-outline reject-all">Reject All</button>
-            </div>
-            <a href="/privacy-policy" class="cookie-policy">Learn more</a>
-        </div>
-    </div>
-
-    <!-- Cookie Preferences Modal -->
-    <div class="cookie-preferences-modal" style="display: none;">
-        <div class="modal-content">
-            <h2>Cookie Preferences</h2>
-            <div class="cookie-options">
-                <div class="cookie-option">
-                    <div class="option-header">
-                        <h3>Essential Cookies</h3>
-                        <p>Required for the website to function properly</p>
-                    </div>
-                    <label class="switch">
-                        <input type="checkbox" checked disabled>
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="cookie-option">
-                    <div class="option-header">
-                        <h3>Analytics Cookies</h3>
-                        <p>Help us understand how visitors interact with our website</p>
-                    </div>
-                    <label class="switch">
-                        <input type="checkbox" name="analytics">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="cookie-option">
-                    <div class="option-header">
-                        <h3>Marketing Cookies</h3>
-                        <p>Used to track visitors across websites for marketing purposes</p>
-                    </div>
-                    <label class="switch">
-                        <input type="checkbox" name="marketing">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-            </div>
-            <div class="modal-buttons">
-                <button class="btn btn-primary save-preferences">Save Preferences</button>
-                <button class="btn btn-secondary close-modal">Cancel</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
     <div class="header-top p-2" role="banner">
-        <div class="container d-flex align-items-center justify-content-center">
-            <img src="logo.png" alt="Mirage Lake Construction Company Logo" class="logo" width="80" height="80">
-            <h1 class="ms-3 m-0 display-4">
-                <span class="company-name">Mirage Lake </span> <span class="company-name d-none d-sm-inline">Bldg Metal Const Ind. LLC</span>
-            </h1>
-        </div>
-    </div>
+            <div class="container d-flex align-items-center justify-content-between">
+                <!-- Logo + Company Name -->
+                <div class="d-flex align-items-center">
+                    <img src="logo.png" alt="Mirage Lake Construction Company Logo" class="logo" width="80" height="80">
+                    <h1 class="ms-3 m-0 display-4">
+                        <span class="company-name">Mirage Lake </span>
+                        <span class="company-name d-none d-sm-inline">Bldg Metal Const Ind. LLC</span>
+                    </h1>
+                </div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light glass-nav shadow-sm py-3 sticky-top" role="navigation">
+                <!-- Burger Menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light glass-nav shadow-sm py-3 sticky-top" role="navigation">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -104,8 +46,8 @@
                     <li class="nav-item px-3"><a class="nav-link nav-text" href="index.html">Home</a></li>
                     <li class="nav-item px-3"><a class="nav-link nav-text" href="services.html">Services</a></li>
                     <li class="nav-item px-3"><a class="nav-link nav-text" href="projects.html">Projects</a></li>
-                    <li class="nav-item px-3"><a class="nav-link nav-text active" href="locations.html">Locations</a></li>
-                    <li class="nav-item px-3"><a class="nav-link nav-text" href="careers.html">Careers</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text" href="locations.html">Locations</a></li>
+                    <li class="nav-item px-3"><a class="nav-link nav-text active" href="careers.html">Careers</a></li>
                     <li class="nav-item px-3"><a class="nav-link nav-text" href="contact.html">Contact</a></li>
                 </ul>
             </div>
